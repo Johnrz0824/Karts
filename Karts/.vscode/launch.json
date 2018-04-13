@@ -1,0 +1,130 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Karts (Debug)",
+			"request": "launch",
+			"preLaunchTask": "Karts Win64 Debug Build",
+			"program": "E:\\UnrealProjects\\Karts\\Karts\\Binaries\\Win64\\Karts-Win64-Debug.exe",
+			"args": [
+			],
+			"cwd": "E:\\Program Files\\Epic Games\\UE_4.19",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "E:\\Program Files\\Epic Games\\UE_4.19\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "Karts (DebugGame)",
+			"request": "launch",
+			"preLaunchTask": "Karts Win64 DebugGame Build",
+			"program": "E:\\UnrealProjects\\Karts\\Karts\\Binaries\\Win64\\Karts-Win64-DebugGame.exe",
+			"args": [
+			],
+			"cwd": "E:\\Program Files\\Epic Games\\UE_4.19",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "E:\\Program Files\\Epic Games\\UE_4.19\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "Karts (Development)",
+			"request": "launch",
+			"preLaunchTask": "Karts Win64 Development Build",
+			"program": "E:\\UnrealProjects\\Karts\\Karts\\Binaries\\Win64\\Karts.exe",
+			"args": [
+			],
+			"cwd": "E:\\Program Files\\Epic Games\\UE_4.19",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "E:\\Program Files\\Epic Games\\UE_4.19\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "Karts (Shipping)",
+			"request": "launch",
+			"preLaunchTask": "Karts Win64 Shipping Build",
+			"program": "E:\\UnrealProjects\\Karts\\Karts\\Binaries\\Win64\\Karts-Win64-Shipping.exe",
+			"args": [
+			],
+			"cwd": "E:\\Program Files\\Epic Games\\UE_4.19",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "E:\\Program Files\\Epic Games\\UE_4.19\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "Karts (Test)",
+			"request": "launch",
+			"preLaunchTask": "Karts Win64 Test Build",
+			"program": "E:\\UnrealProjects\\Karts\\Karts\\Binaries\\Win64\\Karts-Win64-Test.exe",
+			"args": [
+			],
+			"cwd": "E:\\Program Files\\Epic Games\\UE_4.19",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "E:\\Program Files\\Epic Games\\UE_4.19\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "KartsEditor (Debug)",
+			"request": "launch",
+			"preLaunchTask": "KartsEditor Win64 Debug Build",
+			"program": "E:\\Program Files\\Epic Games\\UE_4.19\\Engine\\Binaries\\Win64\\UE4Editor-Win64-Debug.exe",
+			"args": [
+				"E:\\UnrealProjects\\Karts\\Karts\\Karts.uproject",
+				"-debug"
+			],
+			"cwd": "E:\\Program Files\\Epic Games\\UE_4.19",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "E:\\Program Files\\Epic Games\\UE_4.19\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "KartsEditor (DebugGame)",
+			"request": "launch",
+			"preLaunchTask": "KartsEditor Win64 DebugGame Build",
+			"program": "E:\\Program Files\\Epic Games\\UE_4.19\\Engine\\Binaries\\Win64\\UE4Editor.exe",
+			"args": [
+				"E:\\UnrealProjects\\Karts\\Karts\\Karts.uproject",
+				"-debug"
+			],
+			"cwd": "E:\\Program Files\\Epic Games\\UE_4.19",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "E:\\Program Files\\Epic Games\\UE_4.19\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "KartsEditor (Development)",
+			"request": "launch",
+			"preLaunchTask": "KartsEditor Win64 Development Build",
+			"program": "E:\\Program Files\\Epic Games\\UE_4.19\\Engine\\Binaries\\Win64\\UE4Editor.exe",
+			"args": [
+				"E:\\UnrealProjects\\Karts\\Karts\\Karts.uproject"
+			],
+			"cwd": "E:\\Program Files\\Epic Games\\UE_4.19",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "E:\\Program Files\\Epic Games\\UE_4.19\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "Generate Project Files",
+			"type": "clr",
+			"request": "launch",
+			"program": "E:\\Program Files\\Epic Games\\UE_4.19\\Engine\\Binaries\\DotNET\\UnrealBuildTool.exe",
+			"console": "externalTerminal",
+			"args": [
+				"-projectfiles",
+				"-vscode",
+				"-project=\"E:\\UnrealProjects\\Karts\\Karts\\Karts.uproject\"",
+				"-game",
+				"-engine"
+			],
+			"internalConsoleOptions": "openOnSessionStart",
+			"cwd": "E:\\Program Files\\Epic Games\\UE_4.19"
+		}
+	]
+}

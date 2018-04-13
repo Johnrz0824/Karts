@@ -1,0 +1,8 @@
+{
+	"files.exclude": {
+		"E:/UnrealProjects/Karts/Karts/.vscode": true,
+		"E:/UnrealProjects/Karts/Karts/Content": true,
+		"E:/UnrealProjects/Karts/Karts/Intermediate": true,
+		"E:/UnrealProjects/Karts/Karts/Saved": true
+	}
+}
