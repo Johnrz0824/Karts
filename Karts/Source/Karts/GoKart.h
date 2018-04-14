@@ -41,10 +41,13 @@ private:
 		float MaxDegreesPerSecond = 90;
 	UPROPERTY(EditAnywhere)
 		float DragCoefficient = 16;
+	UPROPERTY(EditAnywhere)
+		float RollingResistanceCoefficient = 0.015;
 
 	void MoveForawrd(float Value);
 	void MoveRight(float Value);
 	void UpdateLocationFromVelocity(float DeltaTime);
 	void ApplyRotation(float DeltaTime);
-	FVector GetResistance();
+	FVector GetAirResistance();
+	FVector GetRollingResistance();
 };
