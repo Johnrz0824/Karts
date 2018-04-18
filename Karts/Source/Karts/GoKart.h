@@ -53,4 +53,9 @@ private:
 	void ApplyRotation(float DeltaTime);
 	FVector GetAirResistance();
 	FVector GetRollingResistance();
+
+	UPROPERTY(Replicated)
+	FVector ReplicatedLocation;
+	UPROPERTY(Replicated)
+	FRotator ReplicatedRotation;
 };
