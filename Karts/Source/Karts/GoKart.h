@@ -29,10 +29,6 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 private:
-	float Throttle;
-	float SteeringThrow;
-	FVector Velocity;
-
 	UPROPERTY(EditAnywhere)
 		float Mass = 1000;
 	UPROPERTY(EditAnywhere)
@@ -47,6 +43,7 @@ private:
 		void Server_MoveForward(float Value);
 	UFUNCTION(Server, Reliable, WithValidation)
 		void Server_MoveRight(float Value);
+
 	void MoveForward(float Value);
 	void MoveRight(float Value);
 	void UpdateLocationFromVelocity(float DeltaTime);
@@ -54,8 +51,16 @@ private:
 	FVector GetAirResistance();
 	FVector GetRollingResistance();
 
+	UPROPERTY(ReplicatedUsing=OnRep_ReplicatedTransform)
+	FTransform ReplicatedTransform;
+	UFUNCTION()
+	void OnRep_ReplicatedTransform();
+
 	UPROPERTY(Replicated)
-	FVector ReplicatedLocation;
+	FVector Velocity;
+
 	UPROPERTY(Replicated)
-	FRotator ReplicatedRotation;
+	float Throttle;
+	UPROPERTY(Replicated)
+	float SteeringThrow;
 };
