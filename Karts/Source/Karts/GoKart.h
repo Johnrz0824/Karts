@@ -56,6 +56,7 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 private:
+	FGoKartMove CreateMove(float DeltaTime);
 	UPROPERTY(EditAnywhere)
 		float Mass = 1000;
 	UPROPERTY(EditAnywhere)
@@ -69,11 +70,12 @@ private:
 	UFUNCTION(Server, Reliable, WithValidation) 
 		void Server_SendMove(FGoKartMove Move);
 
-	void SimulateMove(FGoKartMove Move);
+	void SimulateMove(const FGoKartMove& Move);
 	void MoveForward(float Value);
 	void MoveRight(float Value);
 	void UpdateLocationFromVelocity(float DeltaTime);
 	void ApplyRotation(float DeltaTime,float SteeringThrow);
+	void ClearAcknowledgedMoves(float LastMoveTime);
 	FVector GetAirResistance();
 	FVector GetRollingResistance();
 
@@ -89,5 +91,7 @@ private:
 
 	float Throttle;
 	float SteeringThrow;
+
+	TArray<FGoKartMove> UnacknowledgedMoves;
 
 };
